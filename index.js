@@ -15,14 +15,13 @@ const charToInt = () => {
 
     while (input > 0) {
         digits.push(input % 10);
-        digits.join("   ");
         input = Math.trunc(input / 10);
     }
 
-    digits.reverse();
-    console.log(digits);
+    let reversedDigits = digits.reverse().join('   ');
+    console.log(reversedDigits);
     
-    store += `<li>Number split is ${digits}</li>`;
+    store += `<li>Number split is ${reversedDigits}</li>`;
     window.localStorage.setItem('number', store);
 
     var ul = document.getElementById('ul');
